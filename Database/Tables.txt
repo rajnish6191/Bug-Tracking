@@ -1,0 +1,20 @@
+create table BugAssigned(Bugid number,AssignedTo varchar2(40),Assigneddate date);
+
+create table Bugs(Bugid number primary key,Bugname varchar2(30),Projectid number,RaisedDate date,RaisedBy varchar2(40),Priority number(40),Description varchar2(40),status varchar2(30));
+
+create table loginaudit(loginid varchar2(30),logindate date,logindesc varchar2(30));
+
+create table logindetails(loginname varchar2(30) primary key,password varchar2(40),firstname varchar2(40),lastname varchar2(40),logintype varchar2(30),loginstatus number(30),regdate date,squestionid number(20),sanswer varchar2(30),firstlogin number,passmodifieddate date);
+
+create table loginprofile(loginid varchar2(30),birthdate date,Hno varchar2(30),Street varchar2(40),city varchar2(40),state varchar2(40),country varchar2(40),pincode varchar2(40),ContactNo varchar2(40),Email varchar2(40),locale varchar2(40),profilemodifieddate date);
+
+create table Priority(Priorityid number primary key,PriorityType varchar2(40));
+
+create table Project(Projectid number(10) primary key,Projectname varchar2(40),Startdate date,Enddate date,Status varcher2(20),Assignedto varchar2(40));
+
+create table ProjectMembers(Projectid number(30),member varchar2(40),status number(30));
+
+create table questionbase(questionid number(10) primary key,questiondetail varchar2(40));
+
+create table Solution(Bugid number(30),SolvedBy varchar2(30),SolvedDate date,Solution varchar2(40));
+
